@@ -13,15 +13,15 @@ int strlen1(const char* p);								//取字符串长度
 int strcmp1(const char* p, const char* p1);				//比较字符串
 int strcasecmp1(const char* p, const char* p1);			//忽略大小写比较字符串
 int strncmp1(const char* p, const char* p1, int n);		//比较指定长度字符串
-
 int strchr1(const char* p, char c);						//在字符串中查找指定字符
 int strrchr1(const char* p, char c);					//在字符串中反向查找
 int strstr1(const char* p, const char* p1);				//查找字符串
-double strtod(const char* str, char* ppend);			//从字符串 p 中转换 double 类型数值，并将后续的字符串指针存储到 ppend 指向的 char* 类型存储。
-void strtol(char* p, char* ppend, char* base);			//从字符串 p 中转换 long 类型整型数值，base 显式设置转换的整型进制，设置为 0 以根据特定格式判断所用进制，0x, 0X 前缀以解释为十六进制格式整型，0    前缀以解释为八进制格式整型
-void atoi(char* p);										//字符串转换到 int 整型
-void atof(char* p);										//字符串转换到 double 符点数
-void atol(char* p);										//字符串转换到 long 整型
+double strtod1(const char* str, char* ppend);			//从字符串 str 中转换 double 类型数值，并将后续的字符串指针存储到 ppend 指向的 char* 类型存储。
+
+long strtol1(const char* str, char* ppend, const int base);	//从字符串 str 中转换 long 类型整型数值，base 显式设置转换的整型进制，设置为 0 以根据特定格式判断所用进制，0x, 0X 前缀以解释为十六进制格式整型，0    前缀以解释为八进制格式整型
+int atoi1(const char* str);									//字符串转换到 int 整型
+float atof1(const char* str);								//字符串转换到 double 符点数
+long atol1(const char* str);								//字符串转换到 long 整型
 
 int main()
 {
@@ -47,7 +47,7 @@ int main()
 	//cout << strchr1(str1, '2') << endl;
 	//cout << strrchr1(str1, '6') << endl;
 	//cout << strstr1(str1, str2) << endl;
-	//cout << strtod(str1, str2) << endl;
+	//cout << strtod1(str1, str2) << endl;
 
 	std::cout << "Hello World!\n" << endl;
 	return 0;
@@ -242,7 +242,7 @@ int strstr1(const char* str1, const char* str2)
 	return NULL;
 }
 
-double strtod(const char* str, char* ppend)
+double strtod1(const char* str, char* ppend)
 {
 	if (str == NULL)
 		return NULL;
@@ -292,18 +292,20 @@ double strtod(const char* str, char* ppend)
 		return NULL;
 }
 
-void strtol(char* p, char* ppend, char* base)
+long strtol1(const char* str, char* ppend, const int base)
+{
+	return 0;
+}
+
+int atoi1(const char* str)
+{
+	return 0;
+}
+
+float atof1(const char* p)
 {
 }
 
-void atoi(char* p)
-{
-}
-
-void atof(char* p)
-{
-}
-
-void atol(char* p)
+long atol1(const char* str)
 {
 }
