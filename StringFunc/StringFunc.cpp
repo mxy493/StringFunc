@@ -14,10 +14,10 @@ int strcmp1(const char* p, const char* p1);				//比较字符串
 int strcasecmp1(const char* p, const char* p1);			//忽略大小写比较字符串
 int strncmp1(const char* p, const char* p1, int n);		//比较指定长度字符串
 
-char strchr(char* p, char c);							//在字符串中查找指定字符
-char strrchr(char* p,char c);							//在字符串中反向查找
-int strstr(char* p,char* p1);							//查找字符串
-void strtod(char* p, char* ppend);						//从字符串 p 中转换 double 类型数值，并将后续的字符串指针存储到 ppend 指向的 char* 类型存储。
+int strchr1(const char* p, char c);						//在字符串中查找指定字符
+int strrchr1(const char* p, char c);					//在字符串中反向查找
+int strstr1(const char* p, const char* p1);				//查找字符串
+double strtod(const char* str, char* ppend);			//从字符串 p 中转换 double 类型数值，并将后续的字符串指针存储到 ppend 指向的 char* 类型存储。
 void strtol(char* p, char* ppend, char* base);			//从字符串 p 中转换 long 类型整型数值，base 显式设置转换的整型进制，设置为 0 以根据特定格式判断所用进制，0x, 0X 前缀以解释为十六进制格式整型，0    前缀以解释为八进制格式整型
 void atoi(char* p);										//字符串转换到 int 整型
 void atof(char* p);										//字符串转换到 double 符点数
@@ -25,8 +25,8 @@ void atol(char* p);										//字符串转换到 long 整型
 
 int main()
 {
-	char str1[100] = "B5624";
-	char str2[100] = "C56";
+	char str1[100] = "Bsa0.24";
+	char str2[100] = "62";
 	//cout << "Input str1:";
 	//cin >> str1;
 	//cout << "Input str2:";
@@ -43,10 +43,13 @@ int main()
 	//cout << strlen1(str2) << endl;
 	//cout << strcmp1(str1, str2) << endl;
 	//cout << strcasecmp1(str1, str2) << endl;
-	cout << strncmp1(str1, str2, 2) << endl;
+	//cout << strncmp1(str1, str2, 2) << endl;
+	//cout << strchr1(str1, '2') << endl;
+	//cout << strrchr1(str1, '6') << endl;
+	//cout << strstr1(str1, str2) << endl;
+	//cout << strtod(str1, str2) << endl;
 
-
-    std::cout << "Hello World!\n";
+	std::cout << "Hello World!\n" << endl;
 	return 0;
 }
 
@@ -187,18 +190,106 @@ int strncmp1(const char* p, const char* p1, int n)
 	return ret;
 }
 
-char strchr(char* p, char c)
+int strchr1(const char* str, char c)
 {
-	return 0;
+	if (str == NULL)
+		return NULL;
+	int loc = 0;
+	for (; *str != (char)c; ++str)
+	{
+		loc++;
+		if (*str == '\0')
+			return NULL;
+	}
+	return loc + 1;
 }
 
-char strrchr(char* p, char c)
+int strrchr1(const char* str, char c)
 {
-	return 0;
+	if (str == NULL)
+		return NULL;
+	int cur = 0;
+	int loc;
+	for (; *str != '\0'; ++str)
+	{
+		if (*str == c)
+			loc = cur;
+		++cur;
+		//if (*str == '\0')
+		//	return NULL;
+	}
+	if (loc == NULL)
+		return NULL;
+	else
+		return cur - loc;
 }
 
-inline void strtod(char* p, char* ppend)
+int strstr1(const char* str1, const char* str2)
 {
+	if(str1 == NULL && str2 == NULL)
+		return NULL;
+	int loc = 0;
+	const char* s = str1;
+	const char* t = str2;
+	for (; *str1 != '\0'; ++str1)
+	{
+		for (s = str1, t = str2; *t != '\0' && *s == *t; ++s, ++t)
+			NULL;
+		if (*t == '\0')
+			return loc + 1;
+		++loc;
+	}
+	return NULL;
+}
+
+double strtod(const char* str, char* ppend)
+{
+	if (str == NULL)
+		return NULL;
+	double d;
+	int deci = 0;
+	bool find = false;
+	while (*str != '\0')
+	{
+		if (*str == '.' && deci == 0)
+		{
+			++deci;
+			str++;
+			continue;
+		}
+		else if (*str >= '0' && *str <= '9')
+		{
+			if(find==false)
+			{
+				find = true;
+				d = 0;
+			}
+			if (deci == 0)
+			{
+				d = d * 10 + ((int)* str - 48);
+				str++;
+				continue;
+			}
+			else
+			{
+				d = d + ((int)* str - 48) / pow(10, deci);
+				++deci;
+			}
+		}
+		else if (find)
+		{
+			*ppend = *str;
+			return d;
+		}
+		str++;
+	}
+	if (find)
+	{
+		*ppend = *str;
+		return d;
+	}
+	else
+		return NULL;
 }
 
 void strtol(char* p, char* ppend, char* base)
