@@ -41,7 +41,7 @@
   
   <meta name="pjax-timeout" content="1000">
   
-  <meta name="request-id" content="BDDA:577A:7E44DC:B14216:5CE7FEA6" data-pjax-transient>
+  <meta name="request-id" content="A58F:3B29:84A35E:BAA713:5CE80053" data-pjax-transient>
 
 
   
@@ -52,7 +52,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="BDDA:577A:7E44DC:B14216:5CE7FEA6" /><meta name="octolytics-dimension-region_edge" content="ap-southeast-1" /><meta name="octolytics-dimension-region_render" content="iad" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="A58F:3B29:84A35E:BAA713:5CE80053" /><meta name="octolytics-dimension-region_edge" content="ap-southeast-1" /><meta name="octolytics-dimension-region_render" content="iad" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -70,7 +70,7 @@
     <meta name="user-login" content="">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="OWVkOTEwNzQxYjUxMTVmMDIwMmZkYTUzMzAyMDFiM2Y3MDVkY2FiNTA2YmQzYTJmMTRlNTEzMjE0YTJhNjcyNXx7InJlbW90ZV9hZGRyZXNzIjoiMTIyLjE5MC45NC4yOSIsInJlcXVlc3RfaWQiOiJCRERBOjU3N0E6N0U0NERDOkIxNDIxNjo1Q0U3RkVBNiIsInRpbWVzdGFtcCI6MTU1ODcwNzg3OCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+    <meta name="js-proxy-site-detection-payload" content="YmRhM2U1NjEzY2QwZTM2NWFiYjAwM2ZkN2Y3MGMzNGI2ZmQ4ZjQ0N2M0OTJmM2M3MWQ1M2IzYWE1NzA3MGJmYnx7InJlbW90ZV9hZGRyZXNzIjoiMTIyLjE5MC45NC4yOSIsInJlcXVlc3RfaWQiOiJBNThGOjNCMjk6ODRBMzVFOkJBQTcxMzo1Q0U4MDA1MyIsInRpbWVzdGFtcCI6MTU1ODcwODMwOCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
 
     <meta name="enabled-features" content="SPONSORS,UNIVERSE_BANNER,MARKETPLACE_INVOICED_BILLING,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_RECOMMENDATIONS">
 
@@ -137,7 +137,7 @@
           </div>
 
         <div class="d-flex flex-items-center">
-            <a class="d-inline-block d-lg-none f5 text-white no-underline border border-gray-dark rounded-2 px-2 py-1 mr-3 mr-sm-5" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;BDDA:577A:7E44DC:B14216:5CE7FEA6&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2888ea4406bd761756c68c8e531a84b9743dbcc8462281a7e9e91d8d7c7276aa" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up" href="/join?source=header-repo">
+            <a class="d-inline-block d-lg-none f5 text-white no-underline border border-gray-dark rounded-2 px-2 py-1 mr-3 mr-sm-5" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:&quot;2042209282.1558707878&quot;,&quot;originating_request_id&quot;:&quot;A58F:3B29:84A35E:BAA713:5CE80053&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="147f67fd86e0efceb6fc646927f707b0f1c4e5642f97619ba51bbbed45dd3a17" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up" href="/join?source=header-repo">
               Sign&nbsp;up
 </a>
           <button class="btn-link d-lg-none mt-1 js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
@@ -276,7 +276,7 @@
           aria-autocomplete="list"
           aria-controls="jump-to-results"
           aria-label="Search"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=1AUGD9Fe2Sb4OrIj/YLZpTK+UUFGvzh1iRNLQS0Pq6gmDLRS1r9XEERXhyOmvsJMmYG8of1KWNJgegkMlp/Sfw=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=77mPlMQHxEEAjtgZBxs2mcuqUT171NWumkpFrSMbMdAdsD3Jw+ZKd7zj7RlcJy1wYJW83cAhtQlzIwfgmItIBw=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -401,9 +401,9 @@
 
           </div>
 
-        <a class="HeaderMenu-link no-underline mr-3" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;BDDA:577A:7E44DC:B14216:5CE7FEA6&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7f74a8afd2a379d32638d255a4f62c03dc9c01a570fd7cd243f3a3c1859690fe" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in" href="/login?return_to=%2Fmxy493%2FStringFunc%2Fblob%2Fmaster%2FREADME.md">
+        <a class="HeaderMenu-link no-underline mr-3" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:&quot;2042209282.1558707878&quot;,&quot;originating_request_id&quot;:&quot;A58F:3B29:84A35E:BAA713:5CE80053&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="88661edb7d46278ce15eba92eb5b01e2abea3fc6b4256c83d28a39c9aff2021a" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in" href="/login?return_to=%2Fmxy493%2FStringFunc%2Fblob%2Fmaster%2FREADME.md">
           Sign&nbsp;in
-</a>          <a class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;BDDA:577A:7E44DC:B14216:5CE7FEA6&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2e67489fbe87bf72be693f0840b15e565e6db6b9df9fbdf93f2dd1cd7514b148" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up" href="/join?source=header-repo">
+</a>          <a class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:&quot;2042209282.1558707878&quot;,&quot;originating_request_id&quot;:&quot;A58F:3B29:84A35E:BAA713:5CE80053&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="a75ef638728f50600bc541d291326e5ba50ea249e885ccd8f3997074a5bb7224" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up" href="/join?source=header-repo">
             Sign&nbsp;up
 </a>      </div>
     </div>
@@ -444,7 +444,7 @@
 
   <li>
     
-  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;BDDA:577A:7E44DC:B14216:5CE7FEA6&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="87c424b7015a349399a3c63acd7c53d34276a911d66933035b28acadc4d4fb87" href="/login?return_to=%2Fmxy493%2FStringFunc">
+  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:&quot;2042209282.1558707878&quot;,&quot;originating_request_id&quot;:&quot;A58F:3B29:84A35E:BAA713:5CE80053&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="4d000e60e64229838f71db73f041bd8c9d1a861cb5f47d76b519e2abfcc6069b" href="/login?return_to=%2Fmxy493%2FStringFunc">
     <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
     Watch
 </a>    <a class="social-count" href="/mxy493/StringFunc/watchers"
@@ -455,7 +455,7 @@
   </li>
 
   <li>
-        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:187902770,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;BDDA:577A:7E44DC:B14216:5CE7FEA6&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="d9a5e634cdb48dd48582000d3f665e73a28f3ac31273cc0aff1a9adfdb75f69a" href="/login?return_to=%2Fmxy493%2FStringFunc">
+        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:187902770,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:&quot;2042209282.1558707878&quot;,&quot;originating_request_id&quot;:&quot;A58F:3B29:84A35E:BAA713:5CE80053&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="f23a829a9c5b82deb189f95da4721d0e55af310c9833660b30df70212fe1c6f0" href="/login?return_to=%2Fmxy493%2FStringFunc">
       <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
       Star
 </a>
@@ -467,7 +467,7 @@
   </li>
 
   <li>
-      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:187902770,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;BDDA:577A:7E44DC:B14216:5CE7FEA6&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="6d58301bdd567986207d1947209ae934a9f66157eb7bb529b11f09abda359297" href="/login?return_to=%2Fmxy493%2FStringFunc">
+      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:187902770,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:&quot;2042209282.1558707878&quot;,&quot;originating_request_id&quot;:&quot;A58F:3B29:84A35E:BAA713:5CE80053&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="83245ea7ec712cd7fe465ae76d242365ecedde7b1ed2d14bde1d2f29d3df1efd" href="/login?return_to=%2Fmxy493%2FStringFunc">
         <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
         Fork
 </a>
@@ -602,13 +602,13 @@
           <div class="signup-prompt-bg rounded-1">
       <div class="signup-prompt p-4 text-center mb-4 rounded-1">
         <div class="position-relative">
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/prompt_dismissals/signup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="q5AmW2CmbgC2Q7ADRZUHRhN05h1FtnEm2ZDZr5tBva7sFOcw38zpwh57MRydhkw3oJ1bf6Xhp8GE2J44Qn7vmA==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/prompt_dismissals/signup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="KirJScWwU5BYQup3dRv1dcCEp2Ck9zHy/gzb0dqDw1ptrggietrUUvB6a2itCL4Ec20aAkSg5xWjRJxGA7yRbA==" />
             <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
               Dismiss
             </button>
 </form>          <h3 class="pt-2">Join GitHub today</h3>
           <p class="col-6 mx-auto">GitHub is home to over 36 million developers working together to host and review code, manage projects, and build software together.</p>
-          <a class="btn btn-primary" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;files signup prompt&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;BDDA:577A:7E44DC:B14216:5CE7FEA6&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="33c58c2610481003c98f1c07c71b1bfc0fa9f324df333c146d4e580d04bb9ac5" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up" href="/join?source=prompt-blob-show">Sign up</a>
+          <a class="btn btn-primary" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;files signup prompt&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:&quot;2042209282.1558707878&quot;,&quot;originating_request_id&quot;:&quot;A58F:3B29:84A35E:BAA713:5CE80053&quot;,&quot;originating_url&quot;:&quot;https://github.com/mxy493/StringFunc/blob/master/README.md&quot;,&quot;referrer&quot;:null,&quot;user_id&quot;:null}}" data-hydro-click-hmac="c6bf42988fd4867d6f2c03602154b0914cfbf30f27fc098d1e49f2e0face8e89" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up" href="/join?source=prompt-blob-show">Sign up</a>
         </div>
       </div>
     </div>
@@ -802,7 +802,7 @@ long atol1(const char* str);                                   //字符串转换
 <div class="footer container-lg width-full p-responsive" role="contentinfo">
   <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-      <li class="mr-3 mr-lg-0">&copy; 2019 <span title="0.16685s from unicorn-56f9dffc6b-lft6z">GitHub</span>, Inc.</li>
+      <li class="mr-3 mr-lg-0">&copy; 2019 <span title="0.29094s from unicorn-f7596fcc9-4s79t">GitHub</span>, Inc.</li>
         <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3 mr-lg-0"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
