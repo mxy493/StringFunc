@@ -3,16 +3,17 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
 using namespace std;
 
 void strcpy1(char* str1, const char* str2);					//复制字符串
 void strncpy1(char* str1, const char* str2, int n);			//复制指定长度字符串
 void strcat1(char* str1, char* str2);						//附加字符串
 void strncat1(char* str1, const char* str2, int n);			//附加指定长度字符串
-int strlen1(const char* p);									//取字符串长度
-int strcmp1(const char* p, const char* p1);					//比较字符串
-int strcasecmp1(const char* p, const char* p1);				//忽略大小写比较字符串
-int strncmp1(const char* p, const char* p1, int n);			//比较指定长度字符串
+int strlen1(const char* str);					        	//取字符串长度
+int strcmp1(const char* str1, const char* str2);			//比较字符串
+int strcasecmp1(const char* str1, const char* str2);		//忽略大小写比较字符串
+int strncmp1(const char* str1, const char* str2, int n);	//比较指定长度字符串
 int strchr1(const char* p, char c);							//在字符串中查找指定字符
 int strrchr1(const char* p, char c);						//在字符串中反向查找
 int strstr1(const char* p, const char* p1);					//查找字符串
@@ -26,8 +27,8 @@ long atol1(const char* str);								//字符串转换到 long 整型
 
 int main()
 {
-	char str1[100] = "24.2ddas";
-	char str2[100] = "6223";
+	char str1[100] = "12B1";
+	char str2[100] = "12B";
 
 	//strcpy1(str1, str2);
 	//strncpy1(str1, str2, 2);
@@ -40,7 +41,7 @@ int main()
 	//cout << strlen1(str2) << endl;
 	//cout << strcmp1(str1, str2) << endl;
 	//cout << strcasecmp1(str1, str2) << endl;
-	//cout << strncmp1(str1, str2, 2) << endl;
+	cout << strncmp1(str1, str2, 2) << endl;
 	//cout << strchr1(str1, '2') << endl;
 	//cout << strrchr1(str1, '6') << endl;
 	//cout << strstr1(str1, str2) << endl;
@@ -97,93 +98,93 @@ void strncat1(char* str1, const char* str2, int n)
 {
 	if ((str1 == NULL) && (str2 == NULL))
 		return;
-	while (*str1 != '\0')				//将指针str1后移使其指向字符串str1尾字符后一位
+	while (*str1 != '\0')				    //将指针str1后移使其指向字符串str1尾字符后一位
 		++str1;
-	while (n-- && *str2 != '\0')		//逐个复制n个字符
+	while (n-- && *str2 != '\0')		    //逐个复制n个字符
 		* str1++ = *str2++;
 }
 
-int strlen1(const char* p)
+int strlen1(const char* str)
 {
-	const char* eos = p;
-	while (*eos++)
+	const char* eos = str;                  //定义指针eos指向字符串p
+	while (*eos++)                          //遍历字符串p使指针eos逐字符后移，知道遍历玩字符串str
 		NULL;
-	return((int)(eos - p - 1));
+	return((int)(eos - str - 1));           //eos指向字符串str最后一个字符后一位
 }
 
-int strcmp1(const char* p, const char* p1)
+int strcmp1(const char* str1, const char* str2)
 {
-	int ret = 0;
-	while (!(ret = *(unsigned char*)p - *(unsigned char*)p1) && *p1)
+	int ret = 0;        //作为返回值，-1为<，0为=，1为>
+	while (!(ret = *(unsigned char*)str1 - *(unsigned char*)str2) && *str2) //比较当前所指字符大小
 	{
-		++p;
-		++p1;
+		++str1;         //指针后移
+		++str2;
 	}
 	if (ret < 0)
-		ret = -1;
+		ret = -1;       //小于0返回-1
 	else if (ret > 0)
-		ret = 1;
-	return(ret);
+		ret = 1;        //大于0返回1
+	return(ret);        //等于0(相等）返回0
 }
 
-int strcasecmp1(const char* p, const char* p1)
+int strcasecmp1(const char* str1, const char* str2)
 {
-	int ret = 0;
-	if(p == NULL && p1 == NULL)
+	int ret = 0;        //作为返回值，-1为<，0为=，1为>
+	if(str1 == NULL && str2 == NULL)
 		return NULL;
 	int ch1, ch2;
-	while (p && p1 && *p && *p1)
+	while (str1 && str2 && *str1 && *str2)
 	{
-		if ((ch1 = (int)* p) >= 'A' && (ch1 <= 'Z'))
+		if ((ch1 = (int)* str1) >= 'A' && (ch1 <= 'Z'))     //将大写字母统一转为小写
 			ch1 += 32;
-		if ((ch2 = (int)* p1) >= 'A' && (ch2 <= 'Z'))
+		if ((ch2 = (int)* str2) >= 'A' && (ch2 <= 'Z'))
 			ch2 += 32;
-		if (ch1 == ch2)
+		if (ch1 == ch2)     //如果相同，都往后移一位，继续循环比较
 		{
-			++p;
-			++p1;
+			++str1;
+			++str2;
 		}
-		else break;
+		else break;         //否则跳出循环，比较第一次遇到的不同字符
 	}
-	if (ch1 - ch2 < 0)
+	if (ch1 - ch2 < 0)      //小于0返回-1
 		ret = -1;
-	else if (ch1 - ch2 > 0)
+	else if (ch1 - ch2 > 0) //大于0返回1
 		ret = 1;
-	return ret;
+	return ret;             //默认相等返回0
 }
 
-int strncmp1(const char* p, const char* p1, int n)
+int strncmp1(const char* str1, const char* str2, int n)
 {
-	int ret = 0;
-	if (p == NULL && p1 == NULL)
+	int ret = 0;        //作为返回值，-1为<，0为=，1为>
+	if (str1 == NULL && str2 == NULL)
 		return NULL;
-	while (p && p1 && *p && *p1 && *p == *p1 && n--)
+	while (str1 && str2 && *str1 && *str2 && *str1 == *str2 && n--)
 	{
-		if (n == 0)
+		if (n == 0)     //n=0跳出循环，不再继续判断后面的字符
 		{
-			if (*p - *p1 < 0)
+			if (*str1 - *str2 < 0)
 				ret = -1;
-			else if (*p - *p1 > 0)
+			else if (*str1 - *str2 > 0)
 				ret = 1;
 			else ret = 0;
 			break;
 		}
-		++p;
-		++p1;
+		++str1;
+		++str2;
 	}
-	if (n > 0)
+	if (n > 0)          //n>0说明还未判断完n个字符就遇到了字符串结束
 	{
-		if (p && *p != '\0' && p1 && *p1 != '\0')
+		if (str1 && *str1 != '\0' && str2 && *str2 != '\0')
 		{
-			if (*p1 - *p > 0)
+			if (*str2 - *str1 > 0)
 				ret = -1;
-			else if (*p1 - *p < 0)
+			else if (*str2 - *str1 < 0)
 				ret = 1;
 			else ret = 0;
 		}
-		else if (!p && *p == '\0')
+		else if (!str1 || *str1 == '\0')    //指针为NULL或者指向'\0'都说明字符串结束
 			ret = -1;
-		else if (!p1 && *p1 == '\0')
+		else if (!str2 || *str2 == '\0')
 			ret = 1;
 		else ret = 0;
 	}
@@ -299,14 +300,14 @@ long strtol1(const char* str, char* ppend, const int base)
 	long ret;
 	int inte = 0;			//全部转为十进制整数
 	bool find = false;
-	//for (int i = 0; i < s.size(); i++) 
+	//for (int i = 0; i < s.size(); i++)
 	//{
 	//	char t = s[i];
 	//	if (t >= '0' && t <= '9')
 	//		inte = inte * base + t - '0';
 	//	else inte = inte * base + t - 'a' + 10;
 	//}
-	
+
 	if (base == 2)
 	{
 		while (*str != '\0')
