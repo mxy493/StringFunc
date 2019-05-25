@@ -269,7 +269,6 @@ double strtod1(char* str, char* ppend)
 			if (deci == 0)      //为整数
 			{
 				d = d * 10 + (*str - '0');
-				//str++;
 			}
 			else                //为小数
 			{
