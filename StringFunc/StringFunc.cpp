@@ -19,7 +19,8 @@ int strrchr1(const char* str, const char c);				//在字符串中反向查找
 int strstr1(const char* str1, const char* str2);			//查找字符串
 double strtod1(char* str, char* ppend);				        //从字符串str中转换double类型数值，并将后续的字符串指针存储到ppend指向的char*类型存储
 
-long strtol1(const char* str, char* ppend, const int base);	//从字符串str中转换long类型整型数值，base显式设置转换的整型进制，设置为0以根据特定格式判断所用进制，0x, 0X 前缀以解释为十六进制格式整型，0前缀以解释为八进制格式整型
+//函数strtol1未实现
+//long strtol1(const char* str, char* ppend, const int base);	//从字符串str中转换long类型整型数值，base显式设置转换的整型进制，设置为0以根据特定格式判断所用进制，0x, 0X 前缀以解释为十六进制格式整型，0前缀以解释为八进制格式整型
 
 int atoi1(const char* str);									//字符串转换到 int 整型
 double atof1(const char* str);								//字符串转换到 double 符点数
@@ -45,8 +46,8 @@ int main()
 	//cout << strchr1(str1, '2') << endl;
 	//cout << strrchr1(str1, '2') << endl;
 	//cout << strstr1(str1, str2) << endl;
-	cout << strtod1(str1, str2) << endl;
-	//cout << atoi1(str1) << endl;
+	//cout << strtod1(str1, str2) << endl;
+	cout << atoi1(str1) << endl;
 	//cout << atof1(str1) << endl;
 	//cout << atol1(str1) << endl;
 
@@ -298,6 +299,8 @@ double strtod1(char* str, char* ppend)
 		return NULL;
 }
 
+/*
+//未实现
 long strtol1(const char* str, char* ppend, const int base)
 {
 	if (str == NULL)
@@ -341,26 +344,40 @@ long strtol1(const char* str, char* ppend, const int base)
 	}
 	return 0;
 }
+*/
 
 int atoi1(const char* str)
 {
 	if (str == NULL)
 		return NULL;
-	int ret = 0;
-	bool find = false;
+	int ret = 0;				//返回值
+	bool neg = false;			//判断是否负数
+	bool find = false;			//判断是否找到int型整数
 	while (*str != '\0')
 	{
-		if (*str >= '0' && *str <= '9')
+		if(*str == '-')			//遇到字符'-'将neg置为false，表面可能为负数，还需进一步判断其后字符是否数字
+			neg = true;
+		else if (*str >= '0' && *str <= '9')
 		{
-			find = true;
+			find = true;		//找到整数
 			ret = ret * 10 + *str - '0';
 		}
+		else if(neg == true && find == false)
+			neg = false;		//未找到数字字符，前一个字符'-'无效
 		else if (find == true)
+		{
+			if(neg == true)		//置为负数
+				ret = -1 * ret;
 			return ret;
+		}
 		str++;
 	}
 	if (find == true)
+	{
+		if(neg == true)
+			ret = -1 * ret;
 		return ret;
+	}
 	else
 		return NULL;
 }
@@ -369,42 +386,53 @@ double atof1(const char* str)
 {
 	if (str == NULL)
 		return NULL;
-	double d;
-	int deci = 0;
-	bool find = false;
+	double d;               //作为返回值
+	int deci = 0;           //记录小数点位数，为０说明还没有遇到小数点，大于０则为deci位小数
+	bool neg = false;       //判断正负，默认false为整数
+	bool find = false;      //判断是否找到可转为double类型的字符
 	while (*str != '\0')
 	{
-		if (*str == '.' && deci == 0)
+        if(*str == '-')
+            neg = true;
+		else if (*str == '.' && find==true && deci == 0)       //找到小数点，find为true说明已找到数字字符，并且deci为0则作为小数点转换
 		{
-			++deci;
+			deci++;
 			str++;
 			continue;
 		}
 		else if (*str >= '0' && *str <= '9')
 		{
-			if (find == false)
+			if(find==false)
 			{
 				find = true;
-				d = 0;
+				d = 0;          //d初始化为0
 			}
-			if (deci == 0)
+			if (deci == 0)      //为整数
 			{
-				d = d * 10 + ((int)* str - 48);
-				str++;
-				continue;
+				d = d * 10 + (*str - '0');
 			}
-			else
+			else                //为小数
 			{
-				d = d + ((int)* str - 48) / pow(10, deci);
-				++deci;
+				d = d + (*str - '0') / pow(10, deci);
+				deci++;
 			}
 		}
-		else if (find)
-			return d;
+		else if(neg == true && find == false)    //负号后一位不是数字字符，则负号无效
+            neg = false;
+        else if(find)
+        {
+            if(neg == true)
+                d = -1 * d;
+            return d;
+        }
 		str++;
 	}
 	if (find)
+	{
+        if(neg == true)
+            d = -1 * d;
 		return d;
+	}
 	else
 		return NULL;
 }
@@ -413,21 +441,34 @@ long atol1(const char* str)
 {
 	if (str == NULL)
 		return NULL;
-	long ret = 0;
-	bool find = false;
+	long ret = 0;				//返回值
+	bool neg = false;			//判断是否负数
+	bool find = false;			//判断是否找到int型整数
 	while (*str != '\0')
 	{
-		if (*str >= '0' && *str <= '9')
+		if(*str == '-')			//遇到字符'-'将neg置为false，表面可能为负数，还需进一步判断其后字符是否数字
+			neg = true;
+		else if (*str >= '0' && *str <= '9')
 		{
-			find = true;
+			find = true;		//找到整数
 			ret = ret * 10 + *str - '0';
 		}
+		else if(neg == true && find == false)
+			neg = false;		//未找到数字字符，前一个字符'-'无效
 		else if (find == true)
+		{
+			if(neg == true)		//置为负数
+				ret = -1 * ret;
 			return ret;
+		}
 		str++;
 	}
 	if (find == true)
+	{
+		if(neg == true)
+			ret = -1 * ret;
 		return ret;
+	}
 	else
 		return NULL;
 }
