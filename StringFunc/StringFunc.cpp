@@ -14,12 +14,12 @@ int strlen1(const char* str);					        	//取字符串长度
 int strcmp1(const char* str1, const char* str2);			//比较字符串
 int strcasecmp1(const char* str1, const char* str2);		//忽略大小写比较字符串
 int strncmp1(const char* str1, const char* str2, int n);	//比较指定长度字符串
-int strchr1(const char* p, char c);							//在字符串中查找指定字符
-int strrchr1(const char* p, char c);						//在字符串中反向查找
-int strstr1(const char* p, const char* p1);					//查找字符串
-double strtod1(const char* str, char* ppend);				//从字符串 str 中转换 double 类型数值，并将后续的字符串指针存储到 ppend 指向的 char* 类型存储。
+int strchr1(const char* str, const char c);					//在字符串中查找指定字符
+int strrchr1(const char* str, const char c);				//在字符串中反向查找
+int strstr1(const char* str1, const char* str2);			//查找字符串
+double strtod1(char* str, char* ppend);				        //从字符串str中转换double类型数值，并将后续的字符串指针存储到ppend指向的char*类型存储
 
-long strtol1(const char* str, char* ppend, const int base);	//从字符串 str 中转换 long 类型整型数值，base 显式设置转换的整型进制，设置为 0 以根据特定格式判断所用进制，0x, 0X 前缀以解释为十六进制格式整型，0前缀以解释为八进制格式整型
+long strtol1(const char* str, char* ppend, const int base);	//从字符串str中转换long类型整型数值，base显式设置转换的整型进制，设置为0以根据特定格式判断所用进制，0x, 0X 前缀以解释为十六进制格式整型，0前缀以解释为八进制格式整型
 
 int atoi1(const char* str);									//字符串转换到 int 整型
 double atof1(const char* str);								//字符串转换到 double 符点数
@@ -27,7 +27,7 @@ long atol1(const char* str);								//字符串转换到 long 整型
 
 int main()
 {
-	char str1[100] = "12B1";
+	char str1[100] = "f-.d-12.34.B1";
 	char str2[100] = "12B";
 
 	//strcpy1(str1, str2);
@@ -41,11 +41,11 @@ int main()
 	//cout << strlen1(str2) << endl;
 	//cout << strcmp1(str1, str2) << endl;
 	//cout << strcasecmp1(str1, str2) << endl;
-	cout << strncmp1(str1, str2, 2) << endl;
+	//cout << strncmp1(str1, str2, 2) << endl;
 	//cout << strchr1(str1, '2') << endl;
-	//cout << strrchr1(str1, '6') << endl;
+	//cout << strrchr1(str1, '2') << endl;
 	//cout << strstr1(str1, str2) << endl;
-	//cout << strtod1(str1, str2) << endl;
+	cout << strtod1(str1, str2) << endl;
 	//cout << atoi1(str1) << endl;
 	//cout << atof1(str1) << endl;
 	//cout << atol1(str1) << endl;
@@ -191,70 +191,71 @@ int strncmp1(const char* str1, const char* str2, int n)
 	return ret;
 }
 
-int strchr1(const char* str, char c)
+int strchr1(const char* str, const char c)
 {
 	if (str == NULL)
 		return NULL;
 	int loc = 0;
-	for (; *str != (char)c; ++str)
+	for (; *str != (char)c; ++str)      //没找到字符ｃ，则指针后移继续查找
 	{
-		loc++;
-		if (*str == '\0')
+		loc++;              //同步记录当前字符的位置
+		if (*str == '\0')   //说明还没找到字符ｃ，但字符串以查找完
 			return NULL;
 	}
-	return loc + 1;
+	return loc + 1;         //能运行到这一步说明找到了字符ｃ，为第loc+1个字符
 }
 
-int strrchr1(const char* str, char c)
+int strrchr1(const char* str, const char c)
 {
 	if (str == NULL)
 		return NULL;
-	int cur = 0;
-	int loc;
+	int cur = 0;            //计数字符位置，以及得出字符串长度
+	int loc;                //用以记录找到的每一个字符ｃ的位置，最终值为最后一个字符ｃ的位置
 	for (; *str != '\0'; ++str)
 	{
-		if (*str == c)
+		if (*str == c)      //遇到字符c就记录该字符的位置
 			loc = cur;
 		++cur;
-		//if (*str == '\0')
-		//	return NULL;
 	}
-	if (loc == NULL)
+	if (loc == NULL)        //loc默认没有初始化为NULL，仍为NULL说明字符串中没有找到字符ｃ
 		return NULL;
 	else
-		return cur - loc;
+		return cur - loc;   //返回反向查找找到的第一个字符ｃ，即正向查找的最后一个字符ｃ
 }
 
 int strstr1(const char* str1, const char* str2)
 {
-	if(str1 == NULL && str2 == NULL)
+	if(str1 == NULL || str2 == NULL)
 		return NULL;
 	int loc = 0;
 	const char* s = str1;
 	const char* t = str2;
-	for (; *str1 != '\0'; ++str1)
+	for (; *str1 != '\0'; ++str1)       //在str1中找str2
 	{
 		for (s = str1, t = str2; *t != '\0' && *s == *t; ++s, ++t)
-			NULL;
-		if (*t == '\0')
+			NULL;               //判断以字符*s开头的字符串是否与str2相等
+		if (*t == '\0')         //说明在str1中找到了字符串str2，位置为loc+1
 			return loc + 1;
-		++loc;
+		++loc;                  //还未找到则字符位置+1继续循环查找
 	}
-	return NULL;
+	return NULL;                //字符串str1中找不到字符串str2
 }
 
-double strtod1(const char* str, char* ppend)
+double strtod1(char* str, char* ppend)
 {
 	if (str == NULL)
 		return NULL;
-	double d;
-	int deci = 0;
-	bool find = false;
+	double d;               //作为返回值
+	int deci = 0;           //记录小数点位数，为０说明还没有遇到小数点，大于０则为deci位小数
+	bool neg = false;       //判断正负，默认false为整数
+	bool find = false;      //判断是否找到可转为double类型的字符
 	while (*str != '\0')
 	{
-		if (*str == '.' && deci == 0)
+        if(*str == '-')
+            neg = true;
+		else if (*str == '.' && find==true && deci == 0)       //找到小数点，find为true说明已找到数字字符，并且deci为0则作为小数点转换
 		{
-			++deci;
+			deci++;
 			str++;
 			continue;
 		}
@@ -263,30 +264,35 @@ double strtod1(const char* str, char* ppend)
 			if(find==false)
 			{
 				find = true;
-				d = 0;
+				d = 0;          //d初始化为0
 			}
-			if (deci == 0)
+			if (deci == 0)      //为整数
 			{
-				d = d * 10 + ((int)* str - 48);
-				str++;
-				continue;
+				d = d * 10 + (*str - '0');
+				//str++;
 			}
-			else
+			else                //为小数
 			{
-				d = d + ((int)* str - 48) / pow(10, deci);
-				++deci;
+				d = d + (*str - '0') / pow(10, deci);
+				deci++;
 			}
 		}
-		else if (find)
-		{
-			*ppend = *str;
-			return d;
-		}
+		else if(neg == true && find == false)    //负号后一位不是数字字符，则负号无效
+            neg = false;
+        else if(find)
+        {
+            ppend = str;        //将字符串str的剩余部分存到ppend（实际上只是改了指针指向）
+            if(neg == true)
+                d = -1 * d;
+            return d;
+        }
 		str++;
 	}
 	if (find)
 	{
-		*ppend = *str;
+		ppend = str;            //将字符串str的剩余部分存到ppend（实际上只是改了指针指向）
+        if(neg == true)
+            d = -1 * d;
 		return d;
 	}
 	else
