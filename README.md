@@ -1,5 +1,8 @@
 # StringFunc
 C++标准库字符串函数的模拟实现
+
+使用 Visual Studio 2019 编译
+
 ```
 void strcpy1(char* str1, const char* str2);                    //复制字符串
 void strncpy1(char* str1, const char* str2, int n);            //复制指定长度字符串
@@ -18,3 +21,4 @@ int atoi1(const char* str);                                    //字符串转换
 double atof1(const char* str);                                 //字符串转换到 double 符点数
 long atol1(const char* str);                                   //字符串转换到 long 整型
 ```
+
